@@ -29,7 +29,9 @@ st.set_page_config(
 )
 
 # Import Mario theme CSS
-with open("mario_theme.css") as f:
+from pathlib import Path
+css_path = Path(__file__).parent / "mario_theme.css"
+with open(css_path) as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 # Initialize session state variables
