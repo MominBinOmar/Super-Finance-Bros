@@ -21,13 +21,16 @@ except ImportError:
     SKLEARN_AVAILABLE = False
 
 # Page configuration with Mario theme
+
 st.set_page_config(
     page_title="Super Finance Bros - Data & Insights",
     page_icon="💰",
     layout="wide",
     initial_sidebar_state="expanded"
 )
-
+st.markdown("""
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+""", unsafe_allow_html=True)
 # Import Mario theme CSS
 from pathlib import Path
 css_path = Path(__file__).parent / "mario_theme.css"
