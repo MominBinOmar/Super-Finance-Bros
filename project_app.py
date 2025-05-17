@@ -76,13 +76,34 @@ CHARACTERS = {
         'fallback': '👸'
     },
     'Yoshi': {
-        'color': '#4CAF50',
+        'color': '#228B22',
         'icon': '🦖',
         'description': 'The consistent performer! Great at maintaining steady financial habits.',
         'image': 'https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Yoshi/3D/yoshi_3d.png',
         'fallback': '🦖'
     }
 }
+
+# After character selection logic, inject dynamic CSS for --main-color
+character_main_colors = {
+    "Mario": "#E52521",         # Red
+    "Luigi": "#4CAF50",         # Green
+    "Peach": "#FF69B4",         # Pink
+    "Yoshi": "#228B22",         # Dark Green
+}
+selected_color = character_main_colors.get(st.session_state.selected_character, "#E52521")
+
+st.markdown(
+    f"""
+    <style>
+    :root {{
+        --main-color: {selected_color};
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 def load_data(uploaded_file):
     """
     Load data from an uploaded file into a pandas DataFrame.
