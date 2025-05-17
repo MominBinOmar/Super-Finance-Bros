@@ -2,10 +2,13 @@
 
 /* Main Theme Variables */
 :root {
+    --main-color: var(--mario-red); /* Default to Mario */
     --mario-red: #E52521;
+    --luigi-green: #4CAF50;
+    --peach-pink: #FF69B4;
+    --yoshi-dark-green: #228B22;
     --mario-yellow: #F8D210;
     --mario-blue: #0066CC;
-    --luigi-green: #4CAF50;
     --bg-color: #fffbe6;
     --text-color: #262730;
     --border-color: #8B4513;
@@ -21,7 +24,7 @@ body {
 
 /* Modified headers to be less cramped */
 .mario-header {
-    color: var(--mario-red);
+    color: var(--main-color);
     font-family: 'Press Start 2P', cursive;
     text-shadow: 3px 3px 0px var(--border-color);
     font-size: 2rem;
@@ -31,7 +34,7 @@ body {
 }
 
 .mario-section {
-    color: var(--mario-red);
+    color: var(--main-color);
     font-family: 'Press Start 2P', cursive;
     text-shadow: 1px 1px 0px var(--border-color);
     font-size: 1.3rem;
@@ -53,7 +56,7 @@ body {
 
 /* Buttons */
 .stButton>button {
-    background-color: var(--mario-red);
+    background-color: var(--main-color);
     color: white;
     border-radius: 20px;
     padding: 10px 20px;
@@ -98,7 +101,7 @@ body {
 }
 
 .stTabs [aria-selected="true"] {
-    background-color: var(--mario-red) !important;
+    background-color: var(--main-color) !important;
     color: white !important;
 }
 
@@ -118,7 +121,7 @@ body {
 
 /* Progress bars */
 .stProgress > div > div > div {
-    background-color: var(--mario-red);
+    background-color: var(--main-color);
     border-radius: 10px;
 }
 
@@ -129,7 +132,7 @@ body {
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(230,57,70,0.10);
-    border: 1.5px solid var(--mario-red);
+    border: 1.5px solid var(--main-color);
     margin-bottom: 20px;
 }
 
